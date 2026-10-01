@@ -24,6 +24,9 @@ public class TaskService {
     }
 
     public Task create(Task task) {
+        if(task.getCompleted() == null) {
+            task.setCompleted(false);
+        }
         return taskRepository.save(task);
     }
 
@@ -31,7 +34,7 @@ public class TaskService {
         Task task = getById(id);
         task.setTitle(update.getTitle());
         task.setDescription(update.getDescription());
-        task.setCompleted(update.isCompleted());
+        task.setCompleted(update.getCompleted());
         return taskRepository.save(task);
     }
 

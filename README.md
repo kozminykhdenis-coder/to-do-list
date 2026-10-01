@@ -32,3 +32,10 @@ DB_PASSWORD=mysecretpassword
 
 ## Пример запроса
 curl -X POST http://localhost:8080/tasks -H "Content-Type: application/json" -d "{"title":"Купить хлеб","description":"И молоко","completed":false}"
+
+## Тесты
+- Unit-тесты на `TaskService` (Mockito)
+- Интеграционные тесты на `TaskContoller` (`@WebMvcTest` + `MockMvc`)
+
+Запуск
+./mvnw test

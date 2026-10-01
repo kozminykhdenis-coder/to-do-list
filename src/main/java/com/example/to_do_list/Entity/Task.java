@@ -25,6 +25,6 @@ public class Task {
     private String description;
 
     @Column
-    private boolean completed;
+    private Boolean completed;
 
 }
